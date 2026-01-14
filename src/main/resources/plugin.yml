@@ -1,0 +1,9 @@
+name: "SpigotGravePlugin"
+version: "1.0"
+main: "su.rumishistem.spigot_grave_plugin.Main"
+api-version: "1.21.5"
+
+commands:
+    grave:
+        description: "墓を開く"
+        usage: "/grave"
