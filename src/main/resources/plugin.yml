@@ -7,3 +7,6 @@ commands:
     grave:
         description: "墓を開く"
         usage: "/grave"
+    grave_xyz:
+        description: "墓の座標を取得する"
+        usage: "/grave_xyz"
