@@ -43,6 +43,10 @@ public class Main extends JavaPlugin{
 
 		//ロード
 		File dir = getDataFolder();
+		if (!dir.exists()) {
+			dir.mkdir();
+		}
+
 		File xyz_db_file = new File(dir, "xyz.json");
 		if (xyz_db_file.exists()) {
 			try {
