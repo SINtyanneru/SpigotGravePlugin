@@ -48,22 +48,18 @@ public class Main extends JavaPlugin{
 		}
 
 		File xyz_db_file = new File(dir, "xyz.json");
-		if (xyz_db_file.exists()) {
-			try {
+		try {
+			if (xyz_db_file.exists()) {
 				List<XYZDBType> list = new ObjectMapper().readValue(xyz_db_file, new TypeReference<List<XYZDBType>>() {});
 				for (XYZDBType row:list) {
 					XYZTable.regist(UUID.fromString(row.uuid), row.x, row.y, row.z);
 				}
-			} catch (IOException ex) {
-				ex.printStackTrace();
-			}
-		} else {
-			try {
+			} else {
 				xyz_db_file.createNewFile();
 				Files.write("[]".getBytes(), xyz_db_file);
-			} catch (IOException ex) {
-				ex.printStackTrace();
 			}
+		} catch (IOException ex) {
+			ex.printStackTrace();
 		}
 	}
 
