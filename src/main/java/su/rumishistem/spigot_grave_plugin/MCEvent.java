@@ -72,5 +72,6 @@ public class MCEvent implements Listener{
 		player.sendMessage("§4あなたは死んでしまいましたが、狐さんが慈悲をかけてくれました。");
 		player.sendMessage("§4あなたの落としたアイテムは墓にぶち込まれています。");
 		player.sendMessage("§4/graveコマンドを使用して、墓を覗きましょう。");
+		player.sendMessage("§4墓は閉じると中身が消し飛びます、注意してね。");
 	}
 }

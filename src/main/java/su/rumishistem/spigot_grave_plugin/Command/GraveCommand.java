@@ -72,6 +72,10 @@ public class GraveCommand implements CommandExecutor{
 			grave_inventory.setItem(i + 45, sub_contents[i]);
 		}
 
+		//インベントリをクリア
+		main_inventory.clear();
+		sub_inventory.clear();
+
 		//開く
 		player.openInventory(grave_inventory);
 
