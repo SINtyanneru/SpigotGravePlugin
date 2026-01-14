@@ -1,0 +1,2 @@
+# SpigotGravePlugin
+お墓です。
