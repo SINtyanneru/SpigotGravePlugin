@@ -36,10 +36,13 @@ public class Main extends JavaPlugin{
 		getCommand("grave").setExecutor(new GraveCommand(this));
 		getCommand("grave_xyz").setExecutor(new GraveXYZCommand());
 
-		WorldCreator wc = new WorldCreator("graveyard");
-		wc.environment(World.Environment.NORMAL);
-		wc.type(WorldType.FLAT);
-		graveyard = Bukkit.createWorld(wc);
+		graveyard = Bukkit.getWorld("graveyard");
+		if (graveyard == null) {
+			WorldCreator wc = new WorldCreator("graveyard");
+			wc.environment(World.Environment.NORMAL);
+			wc.type(WorldType.FLAT);
+			graveyard = Bukkit.createWorld(wc);
+		}
 
 		//ロード
 		File dir = getDataFolder();
