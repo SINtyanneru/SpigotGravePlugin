@@ -1,5 +1,5 @@
 name: "SpigotGravePlugin"
-version: "1.0"
+version: "1.1"
 main: "su.rumishistem.spigot_grave_plugin.Main"
 api-version: "1.21.5"
 
